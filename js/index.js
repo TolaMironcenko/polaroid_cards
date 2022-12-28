@@ -65,6 +65,7 @@ const cards_list = [
 const create_card = (img, angle, x, y, caption) => {
     const card = document.createElement('div')
     card.classList.add('card')
+    card.classList.add('active')
     card.style = "--image: url('" + img + "'); --angle: " + angle + "; --x: " + x + "; --y: " + y + "; --caption: '" + caption + "'"
     cards_container.append(card)
 }

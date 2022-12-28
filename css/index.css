@@ -46,14 +46,10 @@ body {
     will-change: transform
 }
 
-/*.card:hover {*/
-/*    transform: scale(1) rotate(0deg);*/
-/*    z-index: 1*/
-/*}*/
-
 .card.active {
     transform: scale(1) rotate(0deg);
     z-index: 1;
+    position: absolute;
 }
 
 .card.active:before {
