@@ -1,6 +1,6 @@
 const cards_container = document.querySelector('.card-container')
-const cards = document.querySelectorAll('.card')
-const next_button = document.querySelector('.next-button')
+const next_button = document.querySelector('#next')
+const sobrat_button = document.querySelector('#sobrat')
 
 const cards_list = [
     {'img': '../img/lisa78.jpeg', 'angle': '35deg', 'x': '-80%', 'y': '-35%', 'caption': 'Lisa on Altai - 2022'},
@@ -133,10 +133,20 @@ next_button.addEventListener('click', () => {
 // })
 
 const clear_active = () => {
+    const cards = document.querySelectorAll('.card')
     for (let i = 0; i < cards.length; i++) {
         cards[i].classList.remove('active')
     }
 }
+
+const add_active = () => {
+    const cards = document.querySelectorAll('.card')
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].classList.add('active')
+    }
+}
+
+sobrat_button.addEventListener('click', add_active)
 
 cards_container.addEventListener('click', (e) => {
     if (e.target.classList.contains('active') && e.target.classList.contains('card')) {
