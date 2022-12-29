@@ -38,6 +38,7 @@ body {
     border-radius: 10px;
     background: antiquewhite;
     cursor: pointer;
+    color: black;
     transition: 0.3s;
 }
 
