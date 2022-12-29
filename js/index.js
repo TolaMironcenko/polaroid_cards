@@ -1,5 +1,6 @@
 const cards_container = document.querySelector('.card-container')
 const cards = document.querySelectorAll('.card')
+const next_button = document.querySelector('.next-button')
 
 const cards_list = [
     {'img': '../img/lisa78.jpeg', 'angle': '35deg', 'x': '-80%', 'y': '-35%', 'caption': 'Lisa on Altai - 2022'},
@@ -117,9 +118,19 @@ const create_card = (img, angle, x, y, caption) => {
     cards_container.append(card)
 }
 
-cards_list.reverse().map(card => {
-    create_card(card.img, card.angle, card.x, card.y, card.caption)
+for (let i = parseInt(cards_list.length/2); i >= 0; i--) {
+    create_card(cards_list[i].img, cards_list[i].angle, cards_list[i].x, cards_list[i].y, cards_list[i].caption)
+}
+
+next_button.addEventListener('click', () => {
+    for (let i = parseInt(cards_list.length-1); i >= parseInt(cards_list.length/2+1); i--) {
+        create_card(cards_list[i].img, cards_list[i].angle, cards_list[i].x, cards_list[i].y, cards_list[i].caption)
+    }
 })
+
+// cards_list.reverse().map(card => {
+//     create_card(card.img, card.angle, card.x, card.y, card.caption)
+// })
 
 const clear_active = () => {
     for (let i = 0; i < cards.length; i++) {
