@@ -32,6 +32,19 @@ body {
     height: 80vmin
 }
 
+.next-button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: antiquewhite;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-button:hover {
+    background: aquamarine;
+}
+
 .card {
     position: absolute;
     top: 0;
