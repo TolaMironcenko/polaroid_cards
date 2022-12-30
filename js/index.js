@@ -119,12 +119,12 @@ const create_card = (img, angle, x, y, caption) => {
 }
 
 for (let i = parseInt(cards_list.length/2); i >= 0; i--) {
-    create_card(cards_list[i].img, cards_list[i].angle, cards_list[i].x, cards_list[i].y, cards_list[i].caption)
+    create_card(cards_list[i].img, cards_list[i].angle, cards_list[i].x, cards_list[i].y, '')
 }
 
 next_button.addEventListener('click', () => {
     for (let i = parseInt(cards_list.length-1); i >= parseInt(cards_list.length/2+1); i--) {
-        create_card(cards_list[i].img, cards_list[i].angle, cards_list[i].x, cards_list[i].y, cards_list[i].caption)
+        create_card(cards_list[i].img, cards_list[i].angle, cards_list[i].x, cards_list[i].y, '')
     }
 })
 
